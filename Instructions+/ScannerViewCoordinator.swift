@@ -21,6 +21,7 @@ class ScannerViewCoordinator: BarcodeScannerCodeDelegate, BarcodeScannerErrorDel
             print("Barcode Data: \(code)")
             print("Type: \(type)")
             controller.dismiss(animated: true, completion: nil)
+            ApiCall(code: code)
         }
     }
 

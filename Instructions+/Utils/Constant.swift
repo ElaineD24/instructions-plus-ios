@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum Constant {
+    static let APIGetInfo = "ABC"
+}

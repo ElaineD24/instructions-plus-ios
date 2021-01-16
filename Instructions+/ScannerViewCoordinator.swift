@@ -20,7 +20,11 @@ class ScannerViewCoordinator: BarcodeScannerCodeDelegate, BarcodeScannerErrorDel
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             
             // Api
+            
+            print("Barcode Data: \(code)")
+            print("Type: \(type)")
             let videoUrls = VideoUrls()
+            ApiCall(code: code)
             
             self.scannerView.videoUrls = videoUrls
             print("barcode:", code)

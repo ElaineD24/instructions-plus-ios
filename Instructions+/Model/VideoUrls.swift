@@ -11,8 +11,8 @@ class VideoUrls: ObservableObject {
     
     var urls = [String]()
     
-    init(videoUrls: [String]) {
-        self.videoUrls = videoUrls
+    init(urls: [String]) {
+        self.urls = urls
     }
     
     func getModel() -> [String] {

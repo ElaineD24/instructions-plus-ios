@@ -1,4 +1,4 @@
 use_frameworks!
-platform :ios, '14.3'
+platform :ios, '11'
 pod 'BarcodeScanner'
 target 'Instructions+'

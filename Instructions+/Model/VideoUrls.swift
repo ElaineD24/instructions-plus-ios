@@ -9,7 +9,11 @@ import Foundation
 
 class VideoUrls: ObservableObject {
     
-    var urls = [String]()
+    var urls: [String]
+    
+    init() {
+        urls = []
+    }
     
     init(urls: [String]) {
         self.urls = urls

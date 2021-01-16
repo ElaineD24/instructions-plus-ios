@@ -9,21 +9,29 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var if_scan = false
+    @State private var showingScanner = false
+    @State private var urls: VideoUrls?
+    @State private var inputUrls: VideoUrls?
 
     var body: some View {
 
         NavigationView {
             VStack {
                 Image(systemName: "barcode.viewfinder")
-                Text("Scan")
-                    .font(.title)
-                NavigationLink(destination: ScannerView()) {
-                    Text("Do Something")
-                }
+                Button("Scan") {
+                    self.showingScanner = true
+                }.font(.title)
             }
+            .sheet(isPresented: $showingScanner, content: {
+                ScannerView(videoUrls: inputUrls)
+            }, )
         }
 //        ScannerView()
+    }
+    
+    func loadVideoUrls() -> VideoUrls {
+        guard let inputVideoUrls = inputVideoUrls else { return VideoUrls() }
+        urls = inputVideoUrls
     }
 }
 

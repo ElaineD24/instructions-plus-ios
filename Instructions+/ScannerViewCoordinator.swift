@@ -18,14 +18,19 @@ class ScannerViewCoordinator: BarcodeScannerCodeDelegate, BarcodeScannerErrorDel
 
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            print("Barcode Data: \(code)")
-            print("Type: \(type)")
-            controller.dismiss(animated: true, completion: nil)
+            
+            // Api
+            let videoUrls = VideoUrls()
+            
+            self.scannerView.videoUrls = videoUrls
+            print("barcode:", code)
+            self.scannerView.presentationMode.wrappedValue.dismiss()
         }
     }
 
     func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
         print("scan failed")
+        controller.dismiss(animated: true, completion: nil)
     }
     
     func scannerDidDismiss(_ controller: BarcodeScannerViewController) {

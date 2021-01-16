@@ -118,12 +118,12 @@
 			isa = PBXGroup;
 			children = (
 				CAC3135A25B2BB9C008D4B61 /* ScannerView.swift */,
+				CAC3136C25B2C944008D4B61 /* ScannerViewCoordinator.swift */,
 				CAC3124A25B291A3008D4B61 /* ContentView.swift */,
 				CAC3124825B291A3008D4B61 /* Instructions_App.swift */,
 				CAC3124C25B291A6008D4B61 /* Assets.xcassets */,
 				CAC3125125B291A6008D4B61 /* Info.plist */,
 				CAC3124E25B291A6008D4B61 /* Preview Content */,
-				CAC3136C25B2C944008D4B61 /* ScannerViewCoordinator.swift */,
 			);
 			path = "Instructions+";
 			sourceTree = "<group>";

@@ -28,6 +28,7 @@ struct ScannerView: UIViewControllerRepresentable {
         let barcodeVC = BarcodeScannerViewController()
         barcodeVC.codeDelegate = context.coordinator
         barcodeVC.errorDelegate = context.coordinator
+        barcodeVC.dismissalDelegate = context.coordinator
         
         return barcodeVC
     }

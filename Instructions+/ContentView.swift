@@ -10,28 +10,35 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingScanner = false
+    @State private var showingVideo = false
     @State private var urls: VideoUrls?
     @State private var inputUrls: VideoUrls?
 
     var body: some View {
-
-        NavigationView {
+        ZStack {
+            VideoView(videoUrls: urls ?? VideoUrls(urls: ["https://the-hidden-tent.s3.amazonaws.com/intro.mp4"]), showingVideo: showingVideo)
             VStack {
-                Image(systemName: "barcode.viewfinder")
-                Button("Scan") {
-                    self.showingScanner = true
-                }.font(.title)
+                HStack {
+                    Spacer()
+                    Image(systemName: "barcode.viewfinder").colorInvert()
+                    Button("Scan") {
+                        self.showingScanner = true
+                    }.font(.title)
+                }
+                .padding(.top)
+                .padding(.trailing)
+                Spacer()
             }
-            .sheet(isPresented: $showingScanner, content: {
-                ScannerView(videoUrls: inputUrls)
-            }, )
+            .sheet(isPresented: $showingScanner, onDismiss: loadVideoUrls) {
+                ScannerView(videoUrls: $inputUrls)
+            }
         }
-//        ScannerView()
     }
     
-    func loadVideoUrls() -> VideoUrls {
-        guard let inputVideoUrls = inputVideoUrls else { return VideoUrls() }
+    func loadVideoUrls() {
+        guard let inputVideoUrls = inputUrls else { return }
         urls = inputVideoUrls
+        self.showingVideo.toggle()
     }
 }
 

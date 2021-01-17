@@ -36,7 +36,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func uploadVideo(videoUrl: URL) { // local video file path..
             let timestamp = NSDate().timeIntervalSince1970 // just for some random name.
-            let endPoint = "http://192.168.1.26:3550/videos/upload"
+            let endPoint = "http://192.168.1.26:3550/videos/upload" + "?barcode=" + self.parent.actualBarCode!
             
             AF.upload(multipartFormData: { (multipartFormData) in
                 multipartFormData.append(videoUrl, withName: "video", fileName: "\(timestamp).mp4", mimeType: "\(timestamp)/mp4")
@@ -51,6 +51,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
     @Binding var url: URL?
     @Binding var isShown: Bool
+    @Binding var actualBarCode: String?
 
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)

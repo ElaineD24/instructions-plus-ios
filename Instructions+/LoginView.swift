@@ -56,10 +56,10 @@ struct LoginView : View {
                                 if resultMessage == "Authentication Successful" {
                                     self.authenticationDidSucceed = true
                                     self.authenticationDidFail = false
-                                    self.hideKeyboard()
+//                                    self.hideKeyboard()
                                 } else {
                                     self.authenticationDidFail = true
-                                    self.hideKeyboard()
+//                                    self.hideKeyboard()
                                 }
                                  print(resultMessage)
                               } catch let error {

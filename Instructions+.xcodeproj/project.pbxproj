@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		598591D7B9063FFE41AECA37 /* Pods_Instructions_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8E3D77F53E2B0C6DE5C9E7 /* Pods_Instructions_.framework */; };
+		B48225B325B354F600559FA3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225B225B354F600559FA3 /* VideoView.swift */; };
+		B48225DA25B3BBE000559FA3 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225D925B3BBE000559FA3 /* VideoList.swift */; };
+		B48225E225B41FD100559FA3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225E125B41FD100559FA3 /* ImagePicker.swift */; };
+		B4D236CE25B480C800A12159 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D236CD25B480C800A12159 /* Video.swift */; };
 		CA0A1F9825B3C74900270138 /* UserAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A1F9725B3C74900270138 /* UserAuthController.swift */; };
 		CA0A1F9D25B3CB8800270138 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A1F9C25B3CB8800270138 /* Users.swift */; };
 		CA0A1FA225B3D6A400270138 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A1FA125B3D6A400270138 /* SignUpView.swift */; };
 		CA0A1FA725B3D78100270138 /* UserSignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A1FA625B3D78100270138 /* UserSignUpController.swift */; };
 		CA0A1FBA25B3EBCB00270138 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A1FB925B3EBCB00270138 /* Messages.swift */; };
-		B48225B325B354F600559FA3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225B225B354F600559FA3 /* VideoView.swift */; };
-		B48225DA25B3BBE000559FA3 /* StringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225D925B3BBE000559FA3 /* StringList.swift */; };
-		B48225E225B41FD100559FA3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225E125B41FD100559FA3 /* ImagePicker.swift */; };
 		CAC3124925B291A3008D4B61 /* Instructions_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC3124825B291A3008D4B61 /* Instructions_App.swift */; };
 		CAC3124B25B291A3008D4B61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC3124A25B291A3008D4B61 /* ContentView.swift */; };
 		CAC3124D25B291A6008D4B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC3124C25B291A6008D4B61 /* Assets.xcassets */; };
@@ -55,14 +56,15 @@
 		120832E4124945CF3A9EC04D /* Pods-Instructions+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instructions+.debug.xcconfig"; path = "Target Support Files/Pods-Instructions+/Pods-Instructions+.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7A820898952C5AB905FA49 /* Pods-Instructions+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instructions+.release.xcconfig"; path = "Target Support Files/Pods-Instructions+/Pods-Instructions+.release.xcconfig"; sourceTree = "<group>"; };
 		AE8E3D77F53E2B0C6DE5C9E7 /* Pods_Instructions_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instructions_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48225B225B354F600559FA3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		B48225D925B3BBE000559FA3 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
+		B48225E125B41FD100559FA3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B4D236CD25B480C800A12159 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CA0A1F9725B3C74900270138 /* UserAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthController.swift; sourceTree = "<group>"; };
 		CA0A1F9C25B3CB8800270138 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CA0A1FA125B3D6A400270138 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CA0A1FA625B3D78100270138 /* UserSignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpController.swift; sourceTree = "<group>"; };
 		CA0A1FB925B3EBCB00270138 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
-		B48225B225B354F600559FA3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		B48225D925B3BBE000559FA3 /* StringList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringList.swift; sourceTree = "<group>"; };
-		B48225E125B41FD100559FA3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CAC3124525B291A3008D4B61 /* Instructions+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instructions+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC3124825B291A3008D4B61 /* Instructions_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions_App.swift; sourceTree = "<group>"; };
 		CAC3124A25B291A3008D4B61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,7 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				CA0A1FB925B3EBCB00270138 /* Messages.swift */,
-				B48225D925B3BBE000559FA3 /* StringList.swift */,
+				B48225D925B3BBE000559FA3 /* VideoList.swift */,
+				B4D236CD25B480C800A12159 /* Video.swift */,
 			);
 			path = Codables;
 			sourceTree = "<group>";
@@ -431,10 +434,11 @@
 				B48225B325B354F600559FA3 /* VideoView.swift in Sources */,
 				CAC313FD25B36E1C008D4B61 /* Exceptions.swift in Sources */,
 				CAC313D325B3602A008D4B61 /* Constant.swift in Sources */,
-				B48225DA25B3BBE000559FA3 /* StringList.swift in Sources */,
+				B48225DA25B3BBE000559FA3 /* VideoList.swift in Sources */,
 				CAC3138625B35428008D4B61 /* VideoUrls.swift in Sources */,
 				CA0A1F9825B3C74900270138 /* UserAuthController.swift in Sources */,
 				CA0A1F9D25B3CB8800270138 /* Users.swift in Sources */,
+				B4D236CE25B480C800A12159 /* Video.swift in Sources */,
 				CAC3135B25B2BB9C008D4B61 /* ScannerView.swift in Sources */,
 				CA0A1FA725B3D78100270138 /* UserSignUpController.swift in Sources */,
 				CAC3124B25B291A3008D4B61 /* ContentView.swift in Sources */,

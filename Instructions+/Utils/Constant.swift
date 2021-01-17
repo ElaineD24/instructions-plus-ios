@@ -8,11 +8,12 @@
 import Foundation
 
 enum Constant {
-    static let APIGetInfo = "http://localhost:3550"
+    static let HOST = "http://192.168.1.26:3550"
+    static let APIGetInfo = HOST
 //    static let APIUserAuth = "http://192.168.1.255/auth/login"
 //    static let APINewUser = "http://192.168.1.255/auth/register"
-    static let APIUserAuth = "http://localhost:3550/auth/login"
-    static let APINewUser = "http://localhost:3550/auth/register"
+    static let APIUserAuth = HOST + "/auth/login"
+    static let APINewUser = HOST + "/auth/register"
 
-    static let HOST = "http://192.168.1.26:3550"
+    
 }

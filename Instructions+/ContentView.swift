@@ -56,19 +56,11 @@ struct ContentView: View {
             }
             VStack {
                 Spacer()
-                VStack {
-                    if self.actualBarCode != nil {
-                        HStack {
-                            
-                        }
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Text(self.actualBarCode ?? "")
-                            .foregroundColor(.white)
-                            .transition(.slide)
-                    }
+                HStack {
+                    Spacer()
+                    Text(self.actualBarCode ?? "")
+                        .foregroundColor(.white)
+                        .transition(.slide)
                 }
             }
             .sheet(item: $activeSheet, onDismiss: loadVideoUrls) { item in

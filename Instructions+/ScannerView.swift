@@ -9,6 +9,8 @@ import SwiftUI
 import BarcodeScanner
 
 struct ScannerView: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var videoUrls: VideoUrls?
 
     func makeCoordinator() -> ScannerViewCoordinator {
         ScannerViewCoordinator(self)
@@ -26,6 +28,7 @@ struct ScannerView: UIViewControllerRepresentable {
         let barcodeVC = BarcodeScannerViewController()
         barcodeVC.codeDelegate = context.coordinator
         barcodeVC.errorDelegate = context.coordinator
+        barcodeVC.dismissalDelegate = context.coordinator
         
         return barcodeVC
     }

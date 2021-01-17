@@ -14,4 +14,5 @@ enum Constant {
     static let APIUserAuth = "http://localhost:3550/auth/login"
     static let APINewUser = "http://localhost:3550/auth/register"
 
+    static let HOST = "http://192.168.1.26:3550"
 }

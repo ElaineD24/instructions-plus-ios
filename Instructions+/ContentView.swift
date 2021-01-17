@@ -34,19 +34,20 @@ struct ContentView: View {
             Color.black
                 .edgesIgnoringSafeArea(.bottom)
             VideoView(videoUrls: urls ?? VideoUrls(urls: ["https://the-hidden-tent.s3.amazonaws.com/intro.mp4"]), showingVideo: showingVideo)
+            
             VStack {
                 HStack {
                     Button(action: {
                         self.activeSheet = .first
                         print("clicking")
                     }) {
-                        Image(systemName: "archivebox.fill").frame(width: 100)
+                        Image(systemName: "archivebox.fill").resizable().frame(width: 32, height: 32).foregroundColor(.white)
                     }.padding(.leading)
                     Spacer()
                     Button(action: {
                         self.activeSheet = .second
                     }) {
-                        Image(systemName: "barcode.viewfinder").frame(width: 100)
+                        Image(systemName: "barcode.viewfinder").resizable().frame(width: 32, height: 32).foregroundColor(.white)
                     }
                 }
                 .padding(.top)
@@ -55,11 +56,19 @@ struct ContentView: View {
             }
             VStack {
                 Spacer()
-                HStack {
-                    Spacer()
-                    Text(self.actualBarCode ?? "")
-                        .foregroundColor(.white)
-                        .transition(.slide)
+                VStack {
+                    if self.actualBarCode != nil {
+                        HStack {
+                            
+                        }
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        Text(self.actualBarCode ?? "")
+                            .foregroundColor(.white)
+                            .transition(.slide)
+                    }
                 }
             }
             .sheet(item: $activeSheet, onDismiss: loadVideoUrls) { item in

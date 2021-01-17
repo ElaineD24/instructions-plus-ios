@@ -11,6 +11,7 @@ import BarcodeScanner
 struct ScannerView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var videoUrls: VideoUrls?
+    @Binding var barCode: String?
 
     func makeCoordinator() -> ScannerViewCoordinator {
         ScannerViewCoordinator(self)

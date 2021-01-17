@@ -22,6 +22,7 @@ class ScannerViewCoordinator: BarcodeScannerCodeDelegate, BarcodeScannerErrorDel
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             print("Barcode Data: \(code)")
             print("Type: \(type)")
+            self.scannerView.barCode = code
             let result = self.apiController.makeBarcodeRequest(code: code)
             switch result {
                 case let .success(data):

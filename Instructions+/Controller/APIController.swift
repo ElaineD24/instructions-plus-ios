@@ -21,8 +21,12 @@ class APIController {
                 do {
                     print(data)
                     let decoder = JSONDecoder()
-                    let urlList = try decoder.decode(StringList.self, from: data)
-                    let urls = VideoUrls(urls: urlList.videos)
+                    let urlList = try decoder.decode(VideoList.self, from: data)
+                    var arr:[String] = []
+                    for item in urlList.videos {
+                        arr.append(item.url)
+                    }
+                    let urls = VideoUrls(urls: arr)
                     requestRet = .success(urls)
                 } catch {
                     requestRet = .failure(.dataFormat)

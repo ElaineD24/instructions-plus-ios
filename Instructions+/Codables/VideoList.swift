@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct StringList: Codable {
-    var videos: [String]
+struct VideoList: Codable {
+    var videos: [Video]
 }

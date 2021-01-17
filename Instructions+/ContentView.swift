@@ -24,6 +24,8 @@ struct ContentView: View {
     @State private var pickedUrl: URL?
     @State private var isShown = false
     @State private var activeSheet: ActiveSheet?
+    @State private var barCode: String?
+    @State private var actualBarCode: String?
 
 
 
@@ -38,13 +40,13 @@ struct ContentView: View {
                         self.activeSheet = .first
                         print("clicking")
                     }) {
-                        Image(systemName: "archivebox.fill").frame(width: 200)
+                        Image(systemName: "archivebox.fill").frame(width: 100)
                     }.padding(.leading)
                     Spacer()
                     Button(action: {
                         self.activeSheet = .second
                     }) {
-                        Image(systemName: "barcode.viewfinder").frame(width: 200)
+                        Image(systemName: "barcode.viewfinder").frame(width: 100)
                     }
                 }
                 .padding(.top)
@@ -55,7 +57,7 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("Hello")
+                    Text(self.actualBarCode ?? "")
                         .foregroundColor(.white)
                         .transition(.slide)
                 }
@@ -63,9 +65,9 @@ struct ContentView: View {
             .sheet(item: $activeSheet, onDismiss: loadVideoUrls) { item in
                         switch item {
                         case .first:
-                            ImagePicker(image: $inputImage, url: $pickedUrl, isShown: $isShown)
+                            ImagePicker(image: $inputImage, url: $pickedUrl, isShown: $isShown, actualBarCode: $actualBarCode)
                         case .second:
-                            ScannerView(videoUrls: $inputUrls)
+                            ScannerView(videoUrls: $inputUrls, barCode: $barCode)
                         }
                     }
             
@@ -75,6 +77,8 @@ struct ContentView: View {
     func loadVideoUrls() {
         guard let inputVideoUrls = inputUrls else { return }
         urls = inputVideoUrls
+        guard let barCode = barCode else {return}
+        actualBarCode = barCode
         self.showingVideo.toggle()
     }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		598591D7B9063FFE41AECA37 /* Pods_Instructions_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8E3D77F53E2B0C6DE5C9E7 /* Pods_Instructions_.framework */; };
+		B48225B325B354F600559FA3 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225B225B354F600559FA3 /* VideoView.swift */; };
+		B48225DA25B3BBE000559FA3 /* StringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225D925B3BBE000559FA3 /* StringList.swift */; };
+		B48225E225B41FD100559FA3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48225E125B41FD100559FA3 /* ImagePicker.swift */; };
 		CAC3124925B291A3008D4B61 /* Instructions_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC3124825B291A3008D4B61 /* Instructions_App.swift */; };
 		CAC3124B25B291A3008D4B61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC3124A25B291A3008D4B61 /* ContentView.swift */; };
 		CAC3124D25B291A6008D4B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC3124C25B291A6008D4B61 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		120832E4124945CF3A9EC04D /* Pods-Instructions+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instructions+.debug.xcconfig"; path = "Target Support Files/Pods-Instructions+/Pods-Instructions+.debug.xcconfig"; sourceTree = "<group>"; };
 		2C7A820898952C5AB905FA49 /* Pods-Instructions+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instructions+.release.xcconfig"; path = "Target Support Files/Pods-Instructions+/Pods-Instructions+.release.xcconfig"; sourceTree = "<group>"; };
 		AE8E3D77F53E2B0C6DE5C9E7 /* Pods_Instructions_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instructions_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48225B225B354F600559FA3 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		B48225D925B3BBE000559FA3 /* StringList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringList.swift; sourceTree = "<group>"; };
+		B48225E125B41FD100559FA3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CAC3124525B291A3008D4B61 /* Instructions+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instructions+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC3124825B291A3008D4B61 /* Instructions_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions_App.swift; sourceTree = "<group>"; };
 		CAC3124A25B291A3008D4B61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +108,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B48225D825B3BBC500559FA3 /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				B48225D925B3BBE000559FA3 /* StringList.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
 		CAC3123C25B291A3008D4B61 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 		CAC3124725B291A3008D4B61 /* Instructions+ */ = {
 			isa = PBXGroup;
 			children = (
+				B48225D825B3BBC500559FA3 /* Codables */,
 				CAC313E225B3610E008D4B61 /* Exceptions */,
 				CAC3139925B357B1008D4B61 /* Utils */,
 				CAC3137C25B353E0008D4B61 /* Model */,
@@ -138,6 +153,8 @@
 				CAC3124C25B291A6008D4B61 /* Assets.xcassets */,
 				CAC3125125B291A6008D4B61 /* Info.plist */,
 				CAC3124E25B291A6008D4B61 /* Preview Content */,
+				B48225B225B354F600559FA3 /* VideoView.swift */,
+				B48225E125B41FD100559FA3 /* ImagePicker.swift */,
 			);
 			path = "Instructions+";
 			sourceTree = "<group>";
@@ -389,12 +406,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAC3136D25B2C944008D4B61 /* ScannerViewCoordinator.swift in Sources */,
+				B48225B325B354F600559FA3 /* VideoView.swift in Sources */,
 				CAC313FD25B36E1C008D4B61 /* Exceptions.swift in Sources */,
 				CAC313D325B3602A008D4B61 /* Constant.swift in Sources */,
+				B48225DA25B3BBE000559FA3 /* StringList.swift in Sources */,
 				CAC3138625B35428008D4B61 /* VideoUrls.swift in Sources */,
 				CAC3135B25B2BB9C008D4B61 /* ScannerView.swift in Sources */,
 				CAC3124B25B291A3008D4B61 /* ContentView.swift in Sources */,
 				CAC3124925B291A3008D4B61 /* Instructions_App.swift in Sources */,
+				B48225E225B41FD100559FA3 /* ImagePicker.swift in Sources */,
 				CAC3137E25B35404008D4B61 /* APIController.swift in Sources */,
 				CAC3139B25B357CA008D4B61 /* Logger.swift in Sources */,
 			);
@@ -554,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Instructions+/Preview Content\"";
 				DEVELOPMENT_TEAM = LP375DFX8N;
@@ -566,6 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Instructions-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Instructions+/Preview Content\"";
 				DEVELOPMENT_TEAM = LP375DFX8N;
@@ -589,6 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Instructions-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

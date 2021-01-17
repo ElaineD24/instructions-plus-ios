@@ -8,5 +8,5 @@
 import Foundation
 
 enum Constant {
-    static let APIGetInfo = "ABC"
+    static let HOST = "http://192.168.1.26:3550"
 }
